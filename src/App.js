@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./components/Hero/Hero";
 
 
 function App() {
   return (
     <>
     <div >
-      <Navbar />
+      <div><Navbar /></div>
+      <div><HeroSection /></div>
     </div>
     
     </>

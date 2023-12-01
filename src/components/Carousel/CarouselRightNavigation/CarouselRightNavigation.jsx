@@ -11,7 +11,7 @@ export default function CarouselRightNavigation() {
         swiper.on("slideChange", function () {
             setIsEnd(swiper.isEnd)
         })
-    }, []);
+    }, [swiper]);
 
     return (
         <div className={styles.rightNavigation}>

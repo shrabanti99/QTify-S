@@ -11,7 +11,7 @@ export default function CarouselLeftNavigation() {
         swiper.on("slideChange", function () {
             setIsBeginning(swiper.isBeginning)
         })
-    }, []);
+    }, [swiper]);
 
     return (
         <div className={styles.leftNavigation}>

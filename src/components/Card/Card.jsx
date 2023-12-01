@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./card.module.css";
-import {Tooltip, Chip} from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 
 function Card({data, type}) {
@@ -16,10 +16,9 @@ function Card({data, type}) {
                             <div className={styles.card}>
                                 <img src={image}alt='album' loading='lazy'/>
                                 <div className={styles.banner}>
-                                    <Chip lable={`${follows} Follows`}
-                                    size="small"
-                                    className={styles.chip} 
-                                    />
+                                    <div className={styles.pill}>
+                                        <p>{follows} Follows</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.titleWrapper}>
@@ -30,7 +29,7 @@ function Card({data, type}) {
                 </Tooltip>
                 );
             }
-            case "song": {
+            case "songs": {
                 const { image, likes, title } = data;
                 return (
                 <div className={styles.wrapper}>

@@ -3,11 +3,9 @@ import {ReactComponent as LogoImage} from "../../assets/Logo.svg"
 
 export default function Logo() {
     return (
-    <>
-    <div>
-        <LogoImage />
-    </div>
-    </>
+    // <div>
+        <LogoImage width={67}/>
+    // </div>
     )
     
 }

@@ -1,16 +1,15 @@
 .button {
-    background-color: #121212;
-    color: var(--Primary-400, #34c94b);
+    background-color: var(--color-black);
+    color: var(--color-primary);
     height: 47px;
     width: 170px;
     border-radius: 12px;
-    padding: 10px 16px 10px 16px;
+    padding: 10px 16px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-  
     text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;

@@ -11,7 +11,7 @@ const Controls = ({ data }) => {
     const Swiper = useSwiper();
     useEffect(() => {
         Swiper.slideTo(0, 1);
-    }, [data]);
+    }, [Swiper, data]);
     return <></>
 }
 function Carousel ({ data, renderComponent }) {
@@ -22,6 +22,7 @@ function Carousel ({ data, renderComponent }) {
                 initialSlide={0}
                 modules={[Navigation]}
                 slidesPerView={"auto"}
+                slidesNext={"auto"}
                 spaceBetween={40}
                 allowTouchMove
             >

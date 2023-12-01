@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/styled-engine";
-import { fetchNewAlbums, fetchTopAlbums } from "./api/api";
+import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from "./api/api";
 
 
 function App() {
-  const [data, setdata] = useState({});
+  const [data, setData] = useState({});
   const generateData = (key, source) => {
     source().then((data) => {
-      setdata((prevState) => {
+      setData((prevState) => {
         return {...prevState, [key]: data};
       })
     })
@@ -17,14 +17,15 @@ function App() {
   useEffect(() => {
     generateData("topAlbums", fetchTopAlbums);
     generateData("newAlbums", fetchNewAlbums);
+    generateData("songs", fetchSongs)
   }, []);
-  const {topAlbums = [], newAlbums = []} = data;
+  const {topAlbums = [], newAlbums = [], songs = []} = data;
 
   return (
     <>
       <StyledEngineProvider injectFirst>
         <Navbar />
-        <Outlet context={{data: {topAlbums, newAlbums}}} />
+        <Outlet context={{data: {topAlbums, newAlbums, songs}}} />
       </StyledEngineProvider>
     </>
   );

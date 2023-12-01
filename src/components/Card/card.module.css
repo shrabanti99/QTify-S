@@ -47,7 +47,7 @@
     border-radius: 10px;
     background-color: var(--color-black);
     width: 50%;
-    color: white;
+    color: var(--color-white);
     font-family: Poppins;
     font-size: 10px;
     font-style: normal;

@@ -1,10 +1,12 @@
 import React from "react";
-import {ReactComponent as LogoImage} from "../../assets/Logo.svg"
+import logo from "../../assets/logo.png"
+
 
 export default function Logo() {
     return (
     // <div>
-        <LogoImage width={67}/>
+    <img src = {logo} alt= "qtifylogo" width={67}/>
+        // <LogoImage />
     // </div>
     )
     
